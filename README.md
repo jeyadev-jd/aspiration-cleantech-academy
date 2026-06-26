@@ -11,6 +11,15 @@ frontend/   Next.js 14 (App Router) marketing site, course catalog, registration
 backend/    Express + MongoDB API powering registrations, contact leads, and course data
 ```
 
+## Quick start (both apps)
+
+```bash
+npm run install:all   # installs root, backend, and frontend deps
+npm run dev           # runs backend (:5000) and frontend (:3000) together
+```
+
+Requires `backend/.env` to exist first (see Backend section below).
+
 ## Frontend
 
 Static-exported Next.js app. Pages: Home, Courses, Register, About, Contact, plus an admin section
