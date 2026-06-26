@@ -1,0 +1,40 @@
+export interface Partner {
+  id: number;
+  img: string;
+}
+
+export const partners: Partner[] = [
+  { id: 1, img: "/img/partners/royalenfield.png" },
+  { id: 2, img: "/img/partners/hyundai.png" },
+  { id: 3, img: "/img/partners/cat.jpg" },
+  { id: 4, img: "/img/partners/ashok-leyland.jpg" },
+  { id: 5, img: "/img/partners/toyota.png" },
+  { id: 6, img: "/img/partners/tafe.png" },
+  { id: 7, img: "/img/partners/amco.png" },
+  { id: 8, img: "/img/partners/tatamotors.jpg" },
+  { id: 9, img: "/img/partners/tenneco.svg" },
+  { id: 10, img: "/img/partners/dana.png" },
+  { id: 11, img: "/img/partners/poclain.png" },
+  { id: 12, img: "/img/partners/escorts.jpeg" },
+  { id: 13, img: "/img/partners/jtekt.png" },
+  { id: 14, img: "/img/partners/tvs.png" },
+  { id: 15, img: "/img/partners/lucas-tvs.png" },
+  { id: 16, img: "/img/partners/harita.png" },
+  { id: 17, img: "/img/partners/bosch.png" },
+  { id: 18, img: "/img/partners/brakes-india.png" },
+  { id: 19, img: "/img/partners/columbia-asia.png" },
+  { id: 20, img: "/img/partners/fortune.png" },
+  { id: 21, img: "/img/partners/godrej.jpeg" },
+  { id: 22, img: "/img/partners/le-meridien.png" },
+  { id: 23, img: "/img/partners/pfizer.svg" },
+  { id: 24, img: "/img/partners/pidilite_logo.png" },
+  { id: 25, img: "/img/partners/regenta-hotel.png" },
+  { id: 26, img: "/img/partners/RO-Resort.png" },
+  { id: 27, img: "/img/partners/skf.png" },
+  { id: 28, img: "/img/partners/sundram-fasteners.jpg" },
+  { id: 29, img: "/img/partners/v7hotels.png" },
+  { id: 30, img: "/img/partners/wheels-india.jpeg" },
+  { id: 31, img: "/img/partners/zf.png" },
+  { id: 32, img: "/img/partners/Fairfield.png" },
+  { id: 33, img: "/img/partners/sunduram.jpeg" },
+];
