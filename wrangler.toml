@@ -1,6 +1,5 @@
 name = "aspiration-cleantech-academy"
 compatibility_date = "2026-01-01"
-pages_build_output_dir = "frontend/out"
 
-[build]
-command = "cd frontend && npm install && npm run build"
+[assets]
+directory = "frontend/out"
