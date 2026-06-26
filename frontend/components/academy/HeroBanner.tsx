@@ -17,10 +17,12 @@ export default function HeroBanner() {
           Welcome to Aspiration Cleantech Academy
         </p>
         <h1 style={{ fontSize: "2.4rem", fontWeight: 800, maxWidth: "640px", margin: "0 0 16px" }}>
-          Practical Training for Careers That Matter
+          Chennai&apos;s Best HVAC Training, Now Pan India
         </h1>
         <p style={{ maxWidth: "560px", color: "var(--academy-text-muted-on-dark)", lineHeight: 1.7, marginBottom: "28px" }}>
-          Aspiration Cleantech Academy trains students, fresh graduates, diploma holders, and ITI learners for real, in-demand careers, starting with industry-grade HVAC training. Backed by the engineering experience of Aspiration Cleantech Ventures.
+          Aspiration Cleantech Academy trains students, fresh graduates, diploma holders, and ITI learners across
+          India for real, in-demand careers, starting with industry-grade HVAC training delivered in partnership
+          with HVACRedu Inc. Backed by the engineering experience of Aspiration Cleantech Ventures.
         </p>
         <a href="#courses" className="btn">Explore Courses</a>
       </div>

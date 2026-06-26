@@ -29,14 +29,21 @@ export default function CourseDetailLayout({ detail }: { detail: CourseDetail })
           </div>
 
           {detail.slug === "hvac" && (
-            <p className="muted" style={{ marginBottom: "32px", fontSize: "0.95rem" }}>
-              Our HVAC training is shaped by the real industrial heat-pump engineering work of our parent company,
-              Aspiration Cleantech Ventures.{" "}
-              <a href="https://aspcv.com/heat-pumps/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--academy-primary)", fontWeight: 600 }}>
-                See our heat-pump engineering work
-              </a>
-              .
-            </p>
+            <>
+              <p className="muted" style={{ marginBottom: "16px", fontSize: "0.95rem" }}>
+                Recognized as one of the best HVAC courses in Chennai and across India, our training is shaped by
+                the real industrial heat-pump engineering work of our parent company, Aspiration Cleantech
+                Ventures.{" "}
+                <a href="https://aspcv.com/heat-pumps/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--academy-primary)", fontWeight: 600 }}>
+                  See our heat-pump engineering work
+                </a>
+                .
+              </p>
+              <p className="muted" style={{ marginBottom: "32px", fontSize: "0.95rem" }}>
+                This program is offered in partnership with HVACRedu Inc., aligning our curriculum with
+                industry-recognized HVAC training standards.
+              </p>
+            </>
           )}
 
           <h3 style={{ marginBottom: "16px" }}>Who Is This For?</h3>

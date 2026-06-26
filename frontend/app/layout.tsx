@@ -64,11 +64,19 @@ const organizationJsonLd = {
   url: siteUrl,
   logo: `${siteUrl}/img/academy/logo-transparent.png`,
   description:
-    "Job-oriented technical training programs in HVAC, entrepreneurship, digital marketing, and sales, backed by Aspiration Cleantech Ventures.",
+    "Job-oriented technical training programs in HVAC, entrepreneurship, digital marketing, and sales, backed by Aspiration Cleantech Ventures. Offers the best HVAC course in Chennai with pan-India training, in partnership with HVACRedu Inc.",
+  areaServed: {
+    "@type": "Country",
+    name: "India",
+  },
   parentOrganization: {
     "@type": "Organization",
     name: "Aspiration Cleantech Ventures",
     url: "https://aspcv.com",
+  },
+  memberOf: {
+    "@type": "Organization",
+    name: "HVACRedu Inc.",
   },
   address: {
     "@type": "PostalAddress",
@@ -84,7 +92,12 @@ const organizationJsonLd = {
     contactType: "admissions",
     email: "info@aspcv.com",
   },
-  sameAs: ["https://aspcv.com"],
+  sameAs: [
+    "https://aspcv.com",
+    "https://www.instagram.com/aspiration.cleantech.academy/",
+    "https://www.linkedin.com/company/aspiration-cleantech-academy/",
+    "https://www.youtube.com/channel/UC3H95r-Mb7N56PqFq2Woufw",
+  ],
 };
 
 export default function RootLayout({

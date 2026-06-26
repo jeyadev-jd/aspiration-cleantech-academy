@@ -10,9 +10,16 @@ import Testimonials from "@/components/academy/Testimonials";
 import Faq from "@/components/academy/Faq";
 
 export const metadata: Metadata = {
-  title: "Aspiration Cleantech Academy | HVAC & Career Training Institute",
+  title: "Best HVAC Course in Chennai & Pan India | Aspiration Cleantech Academy",
   description:
-    "Aspiration Cleantech Academy offers practical, job-oriented HVAC, entrepreneurship, digital marketing, and sales training, backed by Aspiration Cleantech Ventures' industrial cleantech expertise. Register to begin.",
+    "Aspiration Cleantech Academy offers the best HVAC course in Chennai with pan-India training in entrepreneurship, digital marketing, and sales, backed by Aspiration Cleantech Ventures and in partnership with HVACRedu Inc. Register to begin.",
+  keywords: [
+    "best HVAC course in Chennai",
+    "best HVAC course in India",
+    "pan India HVAC training",
+    "HVACRedu Inc",
+    "Aspiration Cleantech Academy",
+  ],
 };
 
 export default function Home() {

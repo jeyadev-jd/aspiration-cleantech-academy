@@ -102,15 +102,15 @@ const Footer = () => {
                                         </a>
                                     </p>
                                     <div className="social-icon d-flex align-items-center">
-                                        <Link href="#">
-                                            <i className="fab fa-facebook-f" />
-                                        </Link>
-                                        <Link href="#">
+                                        <a href="https://www.instagram.com/aspiration.cleantech.academy/" target="_blank" rel="noopener noreferrer">
+                                            <i className="fa-brands fa-instagram" />
+                                        </a>
+                                        <a href="https://www.linkedin.com/company/aspiration-cleantech-academy/" target="_blank" rel="noopener noreferrer">
                                             <i className="fa-brands fa-linkedin-in" />
-                                        </Link>
-                                        <Link href="#">
+                                        </a>
+                                        <a href="https://www.youtube.com/channel/UC3H95r-Mb7N56PqFq2Woufw" target="_blank" rel="noopener noreferrer">
                                             <i className="fa-brands fa-youtube" />
-                                        </Link>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
