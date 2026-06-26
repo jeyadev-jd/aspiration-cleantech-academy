@@ -2,11 +2,14 @@
   "name": "aspiration-cleantech-academy",
   "private": true,
   "scripts": {
-    "install:all": "npm install --prefix backend && npm install --prefix frontend",
-    "dev": "concurrently -n backend,frontend -c green,magenta \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
-    "build": "npm run build --prefix frontend"
+    "install:all": "npm install && npm install --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "dev": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy",
+    "db:migrate": "wrangler d1 migrations apply aspcv-academy-db --remote",
+    "db:migrate:local": "wrangler d1 migrations apply aspcv-academy-db --local"
   },
   "devDependencies": {
-    "concurrently": "^9.1.0"
+    "wrangler": "^4.0.0"
   }
 }

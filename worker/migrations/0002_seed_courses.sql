@@ -1,0 +1,6 @@
+INSERT INTO courses (id, title, description, price, image_url, category, is_published, created_at) VALUES
+  (lower(hex(randomblob(16))), 'HVAC', 'Hands-on HVAC installation, maintenance, and repair training over 3 months (12 weeks), covering residential and commercial systems.', 25000, '/img/service/hvac.jpg', 'Technical', 1, unixepoch() * 1000),
+  (lower(hex(randomblob(16))), 'Entrepreneurship', 'A 2-month (8 week) program covering business planning, funding, and go-to-market strategy for first-time founders.', 18000, '/img/academy/entrepreneur.jpg', 'Business', 1, unixepoch() * 1000),
+  (lower(hex(randomblob(16))), 'Digital Marketing', 'Practical digital marketing training across SEO, paid ads, and social media, spanning 2.5 months (10 weeks).', 20000, '/img/academy/digitalmarketing.jpg', 'Marketing', 1, unixepoch() * 1000),
+  (lower(hex(randomblob(16))), 'Sales Executive', 'A focused 6-week sales training program covering pitching, negotiation, and CRM tools for entry-level sales roles.', 12000, '/img/academy/sales-executive.webp', 'Sales', 1, unixepoch() * 1000),
+  (lower(hex(randomblob(16))), 'Business Development', 'A 2-month (8 week) program building skills in partnerships, lead generation, and account growth strategy.', 18000, '/img/academy/business-development.webp', 'Business', 1, unixepoch() * 1000);

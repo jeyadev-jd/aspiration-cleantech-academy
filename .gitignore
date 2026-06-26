@@ -7,3 +7,5 @@ out/
 .DS_Store
 logs/
 *.log
+.wrangler/
+.dev.vars

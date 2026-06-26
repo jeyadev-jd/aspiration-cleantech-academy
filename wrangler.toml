@@ -1,5 +1,21 @@
 name = "aspiration-cleantech-academy"
+main = "worker/src/index.js"
 compatibility_date = "2026-01-01"
 
 [assets]
 directory = "frontend/out"
+binding = "ASSETS"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "aspcv-academy-db"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+migrations_dir = "worker/migrations"
+
+# Optional: Cloudflare Rate Limiting binding for the login endpoint.
+# Add via dashboard (Settings > Bindings > Rate limiter) or uncomment and configure:
+# [[unsafe.bindings]]
+# name = "LOGIN_LIMITER"
+# type = "ratelimit"
+# namespace_id = "1001"
+# simple = { limit = 10, period = 60 }
