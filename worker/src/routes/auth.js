@@ -81,4 +81,31 @@ export async function loginAdmin(request, env, origin) {
   return json({ _id: admin.id, email: admin.email, role: admin.role, token }, { status: 200 }, origin, env);
 }
 
+// One-time bootstrap: only works while the admins table is empty. Self-disables after first use,
+// so it can stay deployed without becoming an open "create admin" endpoint.
+export async function setupAdmin(request, env, origin) {
+  const existing = await env.DB.prepare('SELECT COUNT(*) as count FROM admins').first();
+  if (existing.count > 0) {
+    return json({ error: 'Setup already completed. An admin account already exists.' }, { status: 403 }, origin, env);
+  }
+
+  const body = await request.json().catch(() => ({}));
+  const { email, password } = body;
+
+  if (!email || !password || password.length < 8) {
+    return json({ error: 'Email and a password of at least 8 characters are required.' }, { status: 400 }, origin, env);
+  }
+
+  const id = crypto.randomUUID();
+  const passwordHash = await hashPassword(password);
+
+  await env.DB.prepare(
+    'INSERT INTO admins (id, email, password_hash, role, failed_login_attempts, lock_until, created_at) VALUES (?, ?, ?, ?, 0, NULL, ?)'
+  )
+    .bind(id, email, passwordHash, 'admin', Date.now())
+    .run();
+
+  return json({ message: 'Admin account created. You can now log in.' }, { status: 201 }, origin, env);
+}
+
 export { hashPassword };

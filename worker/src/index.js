@@ -1,5 +1,5 @@
 import { json, corsHeaders } from './cors.js';
-import { loginAdmin } from './routes/auth.js';
+import { loginAdmin, setupAdmin } from './routes/auth.js';
 import { getCourses, getAllCoursesAdmin, createCourse, deleteCourse } from './routes/academy.js';
 import { submitRegistration, getRegistrations, deleteAllRegistrations } from './routes/registration.js';
 import { submitContactForm, getLeads, deleteAllLeads } from './routes/contact.js';
@@ -40,6 +40,9 @@ export default {
         // Order matters: /academy/register and /academy/all must be checked before the generic /academy/:id routes.
         if (pathname === '/api/v1/auth/login' && request.method === 'POST') {
           return await loginAdmin(request, env, origin);
+        }
+        if (pathname === '/api/v1/auth/setup' && request.method === 'POST') {
+          return await setupAdmin(request, env, origin);
         }
 
         if (pathname === '/api/v1/academy/register' && request.method === 'POST') {
