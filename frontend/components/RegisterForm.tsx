@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "/api/v1";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api/v1";
 
 const courses = [
   { id: "hvac", name: "HVAC Training" },
@@ -267,11 +267,11 @@ export default function RegisterForm() {
                       </label>
                     ))}
                   </div>
-                  <div className="mt-4 pt-3 d-flex justify-content-between align-items-center">
+                  <div className="mt-4 pt-3 d-flex flex-wrap gap-3 justify-content-between align-items-center register-step-actions">
                     <button
                       type="button"
                       className="btn btn-outline-dark px-4 py-3 rounded"
-                      style={{ fontWeight: 600, fontSize: "1.1rem" }}
+                      style={{ fontWeight: 600, fontSize: "1rem", background: "transparent", color: "#333", border: "1px solid #333" }}
                       onClick={() => setStep(1)}
                       disabled={status.loading}
                     >
@@ -279,8 +279,8 @@ export default function RegisterForm() {
                     </button>
                     <button
                       type="button"
-                      className="btn text-white px-5 py-3 rounded"
-                      style={{ backgroundColor: "var(--theme)", fontWeight: 600, fontSize: "1.1rem" }}
+                      className="btn text-white px-4 py-3 rounded flex-grow-1"
+                      style={{ backgroundColor: "var(--theme)", fontWeight: 600, fontSize: "1rem" }}
                       onClick={nextStep}
                       disabled={status.loading}
                     >

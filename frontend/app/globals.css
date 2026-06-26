@@ -582,6 +582,15 @@ nav a {
     display: flex;
   }
 
+  .register-step-actions {
+    flex-direction: column-reverse;
+    align-items: stretch !important;
+  }
+
+  .register-step-actions button {
+    width: 100%;
+  }
+
   .navbar-links {
     display: none;
   }
