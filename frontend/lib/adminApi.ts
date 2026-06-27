@@ -19,6 +19,18 @@ export async function adminLogin(email: string, password: string, turnstileToken
   return data.token;
 }
 
+export async function setupAdmin(email: string, password: string): Promise<void> {
+  const res = await fetch(`${API_URL}/auth/setup`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, password }),
+  });
+  if (!res.ok) {
+    const body = await res.json().catch(() => ({}));
+    throw new Error(body.error || body.message || "Setup failed.");
+  }
+}
+
 export interface Registration {
   _id: string;
   name: string;
