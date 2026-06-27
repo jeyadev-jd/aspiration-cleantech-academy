@@ -35,10 +35,25 @@ export default function RegisterForm() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   }
 
-  async function nextStep() {
+  function isValidPhone(phone: string) {
+    const digitsOnly = phone.replace(/[\s\-()]/g, "").replace(/^\+?91/, "");
+    return /^[6-9]\d{9}$/.test(digitsOnly);
+  }
+
+  async function nextStep(e?: React.FormEvent) {
+    e?.preventDefault();
+
     if (step === 1) {
-      if (!formData.name || !formData.phone) {
-        alert("Name and Phone are required.");
+      if (!formData.name.trim()) {
+        alert("Name is required.");
+        return;
+      }
+      if (!formData.phone.trim()) {
+        alert("Phone number is required.");
+        return;
+      }
+      if (!isValidPhone(formData.phone)) {
+        alert("Please enter a valid 10-digit Indian mobile number.");
         return;
       }
       if (!formData.email) {
@@ -141,7 +156,7 @@ export default function RegisterForm() {
               </div>
 
               {step === 1 && (
-                <div className="step-content">
+                <form className="step-content" onSubmit={nextStep}>
                   <h4 className="mb-4" style={{ fontWeight: 700, borderBottom: "1px solid #eee", paddingBottom: "15px" }}>
                     Step 1: Personal Details
                   </h4>
@@ -156,6 +171,7 @@ export default function RegisterForm() {
                           className="form-control p-3 bg-light border-0 rounded"
                           placeholder="John Doe"
                           name="name"
+                          required
                           value={formData.name}
                           onChange={handleInputChange}
                         />
@@ -171,6 +187,7 @@ export default function RegisterForm() {
                           className="form-control p-3 bg-light border-0 rounded"
                           placeholder="john@example.com"
                           name="email"
+                          required
                           value={formData.email}
                           onChange={handleInputChange}
                         />
@@ -183,9 +200,12 @@ export default function RegisterForm() {
                         </label>
                         <input
                           type="tel"
+                          inputMode="numeric"
+                          autoComplete="tel"
                           className="form-control p-3 bg-light border-0 rounded"
                           placeholder="+91 98765 43210"
                           name="phone"
+                          required
                           value={formData.phone}
                           onChange={handleInputChange}
                         />
@@ -224,20 +244,19 @@ export default function RegisterForm() {
                     </div>
                     <div className="col-12 mt-4 text-end">
                       <button
-                        type="button"
+                        type="submit"
                         className="btn text-white px-5 py-3 rounded"
                         style={{ backgroundColor: "var(--theme)", fontWeight: 600, fontSize: "1.1rem" }}
-                        onClick={nextStep}
                       >
                         Continue <i className="fa-solid fa-arrow-right ms-2"></i>
                       </button>
                     </div>
                   </div>
-                </div>
+                </form>
               )}
 
               {step === 2 && (
-                <div className="step-content">
+                <form className="step-content" onSubmit={nextStep}>
                   <h4 className="mb-4" style={{ fontWeight: 700, borderBottom: "1px solid #eee", paddingBottom: "15px" }}>
                     Step 2: Choose Your Course
                   </h4>
@@ -278,10 +297,9 @@ export default function RegisterForm() {
                       <i className="fa-solid fa-arrow-left me-2"></i> Back
                     </button>
                     <button
-                      type="button"
+                      type="submit"
                       className="btn text-white px-4 py-3 rounded flex-grow-1"
                       style={{ backgroundColor: "var(--theme)", fontWeight: 600, fontSize: "1rem" }}
-                      onClick={nextStep}
                       disabled={status.loading}
                     >
                       {status.loading ? "Submitting..." : "Complete Registration"} <i className="fa-solid fa-check ms-2"></i>
@@ -291,7 +309,7 @@ export default function RegisterForm() {
                   <p className="text-muted text-center mt-4 mb-0" style={{ fontSize: "0.85rem" }}>
                     Your information is used only to contact you about this registration.
                   </p>
-                </div>
+                </form>
               )}
 
               {step === 3 && (

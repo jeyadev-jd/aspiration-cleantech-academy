@@ -3,7 +3,7 @@ import CourseDetailLayout from "@/components/academy/CourseDetailLayout";
 import { courseDetails } from "@/lib/courseDetailData";
 
 export const metadata: Metadata = {
-  title: "Business Development Training Program | Aspiration Cleantech Academy",
+  title: "Business Development Training Program",
   description: "Learn strategic business growth, client acquisition, partnership building, and market expansion techniques.",
 };
 

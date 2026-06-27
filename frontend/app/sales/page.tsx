@@ -3,7 +3,7 @@ import CourseDetailLayout from "@/components/academy/CourseDetailLayout";
 import { courseDetails } from "@/lib/courseDetailData";
 
 export const metadata: Metadata = {
-  title: "Sales Executive Training Program | Aspiration Cleantech Academy",
+  title: "Sales Executive Training Program",
   description: "Develop professional selling skills, customer relationship management, and sales techniques.",
 };
 

@@ -3,7 +3,7 @@ import ContactForm from "@/components/ContactForm";
 import ContactAddress from "@/components/academy/ContactAddress";
 
 export const metadata: Metadata = {
-  title: "Contact Aspiration Cleantech Academy",
+  title: "Contact Us",
   description:
     "Get in touch with Aspiration Cleantech Academy for questions about HVAC, entrepreneurship, digital marketing, or sales training programs.",
 };

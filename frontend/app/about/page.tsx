@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Us | Aspiration Cleantech Academy",
+  title: "About Us",
   description:
     "Aspiration Cleantech Academy is the training initiative of Aspiration Cleantech Ventures, an industrial cleantech company known for advanced heat-pump and sustainable energy solutions.",
 };

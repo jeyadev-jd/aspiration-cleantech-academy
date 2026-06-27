@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import RegisterForm from "@/components/RegisterForm";
 
 export const metadata: Metadata = {
-  title: "Register | Aspiration Cleantech Academy Training Programs",
+  title: "Register",
   description:
     "Register your interest in HVAC, entrepreneurship, digital marketing, or sales training at Aspiration Cleantech Academy. Our team will contact you with full course details.",
 };

@@ -3,7 +3,7 @@ import CourseDetailLayout from "@/components/academy/CourseDetailLayout";
 import { courseDetails } from "@/lib/courseDetailData";
 
 export const metadata: Metadata = {
-  title: "Entrepreneurship Training Program | Aspiration Cleantech Academy",
+  title: "Entrepreneurship Training Program",
   description: "Learn to build, launch, and scale your own business with practical entrepreneurship training and mentorship.",
 };
 

@@ -3,7 +3,7 @@ import CourseDetailLayout from "@/components/academy/CourseDetailLayout";
 import { courseDetails } from "@/lib/courseDetailData";
 
 export const metadata: Metadata = {
-  title: "Best HVAC Course in Chennai & India | Aspiration Cleantech Academy",
+  title: "Best HVAC Course in Chennai & India",
   description:
     "Industry-oriented HVAC training in Chennai with hands-on practical exposure and skill development. In partnership with HVACRedu Inc., training students across India for real HVAC careers.",
   keywords: [
